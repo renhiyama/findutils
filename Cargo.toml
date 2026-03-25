@@ -14,7 +14,7 @@ argmax = "0.4.0"
 chrono = "0.4.44"
 clap = "4.6"
 faccess = "0.2.4"
-nix = { version = "0.31", features = ["fs", "user"] }
+nix = { git = "https://github.com/renhiyama/nix", branch = "runixos-0.29" }
 onig = { version = "6.5", default-features = false }
 regex = "1.12"
 uucore = { version = "0.7.0", features = ["entries", "fs", "fsext", "mode"] }
@@ -23,7 +23,7 @@ walkdir = "2.5"
 [dev-dependencies]
 assert_cmd = "2"
 filetime = "0.2"
-nix = { version = "0.31", features = ["fs"] }
+nix = { git = "https://github.com/renhiyama/nix", branch = "runixos-0.29" }
 predicates = "3"
 pretty_assertions = "1.4.1"
 serial_test = "3.4"
@@ -64,3 +64,9 @@ if_not_else = "warn"
 manual_let_else = "warn"
 # Disable for now, we have a few occurrences
 # panic = "warn"
+
+[patch.crates-io]
+libc = { git = "https://github.com/renhiyama/libc", branch = "libc-0.2" }
+rustix = { git = "https://github.com/renhiyama/rustix" }
+mio = { git = "https://github.com/renhiyama/mio" }
+socket2 = { git = "https://github.com/renhiyama/socket2" }
